@@ -1,5 +1,18 @@
 # wrangler
 
+## 3.18.0
+
+### Minor Changes
+
+- [#4497](https://github.com/cloudflare/workers-sdk/pull/4497) [`01eda780`](https://github.com/cloudflare/workers-sdk/commit/01eda780253cb0b4b5b56c7295f1761d17c9909a) Thanks [@RamIdeas](https://github.com/RamIdeas)! - Reintroduces some internal refactorings of wrangler dev servers (including `wrangler dev`, `wrangler dev --remote`, and `unstable_dev()`).
+
+  These changes were released in 3.13.0 and reverted in 3.13.1 -- we believe the changes are now more stable and ready for release again.
+
+  There are no changes required for developers to opt-in. Improvements include:
+
+  - fewer 'address in use' errors upon reloads
+  - upon config/source file changes, requests are buffered to guarantee the response is from the new version of the Worker
+
 ## 3.17.1
 
 ### Patch Changes
